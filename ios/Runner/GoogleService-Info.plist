@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCSwltfN0yNvwq9a2yz0h7jUQDXpRW5xkc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1090766392131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.applicationpfe</string>
+	<key>PROJECT_ID</key>
+	<string>ennakl-f27a2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ennakl-f27a2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1090766392131:ios:6d4c2569c1116efe61fdf6</string>
+	<key>DATABASE_URL</key>
+	<string>https://ennakl-f27a2-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
