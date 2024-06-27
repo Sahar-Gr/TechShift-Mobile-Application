@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090766392131",
+    "project_id": "ennakl-f27a2",
+    "storage_bucket": "ennakl-f27a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090766392131:android:0c75338b55624dd461fdf6",
+        "android_client_info": {
+          "package_name": "com.example.applicationpfe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxX9FBxjAtZJt-l6OO2bKXy7buYl66WE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
