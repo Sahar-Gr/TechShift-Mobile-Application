@@ -13,31 +13,10 @@ class SigininController extends GetxController with StateMixin {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
-  String? checkEmailValidation(String? value) {
-    if (value == null || value.isEmpty) {
-      return 'Please enter some text';
-    }
-    bool emailValid = RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(value);
-    if (!emailValid) {
-      return 'Please enter a valid email';
-    }
-    return null;
-  }
-
-  String? checkPwdValidation(String? value) {
-    if (value != null) {
-      if (value.isEmpty) {
-        return 'Please enter some text';
-      }
-
-      if (value.length < 6) {
-        return 'Password must be at least 6 characters';
-      }
-    }
-    return null;
+  @override
+  void onInit() {
+    change(null, status: RxStatus.success());
+    super.onInit();
   }
 
   void togglePasswordVisibility() {
@@ -68,19 +47,6 @@ class SigininController extends GetxController with StateMixin {
       log("Error signing in: $e");
     } finally {
       change(null, status: RxStatus.success());
-    }
-  }
-
-  // Sign up with email and password
-  Future<User?> signUpWithEmailAndPassword(
-      String email, String password) async {
-    try {
-      UserCredential userCredential = await _auth
-          .createUserWithEmailAndPassword(email: email, password: password);
-      return userCredential.user;
-    } catch (e) {
-      log("Error signing up: $e");
-      return null;
     }
   }
 }

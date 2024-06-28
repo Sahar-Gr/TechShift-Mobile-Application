@@ -1,3 +1,5 @@
+import 'package:applicationpfe/app/core/helpers/formvalidation.dart';
+import 'package:applicationpfe/app/routes/app_pages.dart';
 import 'package:applicationpfe/constants/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +42,7 @@ class SigininView extends GetView<SigininController> {
                   children: [
                     TextFormField(
                       controller: controller.emailController,
-                      validator: controller.checkEmailValidation,
+                      validator: FormValidation.checkEmailValidation,
                       decoration: const InputDecoration(
                         labelText: 'Email',
                         hintText: 'Enter your email',
@@ -53,7 +55,7 @@ class SigininView extends GetView<SigininController> {
                         builder: (_) {
                           return TextFormField(
                             controller: controller.passwordController,
-                            validator: controller.checkPwdValidation,
+                            validator: FormValidation.checkPwdValidation,
                             obscureText: controller.isPasswordVisible,
                             decoration: InputDecoration(
                                 labelText: 'Password',
@@ -85,12 +87,22 @@ class SigininView extends GetView<SigininController> {
                     const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: controller.signInWithEmailAndPassword,
-                      child: const Text(
-                        'Sign in',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
+                      child: controller.obx(
+                          (s) => const Text(
+                                'Sign in',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                          onLoading: const Center(
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                            ),
+                          )),
                     ),
+                    const SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () => Get.offNamed(Routes.REGISTER),
+                        child: const Text("Register"))
                   ],
                 ),
               ),
