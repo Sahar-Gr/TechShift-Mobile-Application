@@ -2,6 +2,7 @@ import 'package:applicationpfe/app/core/helpers/formvalidation.dart';
 import 'package:applicationpfe/app/routes/app_pages.dart';
 import 'package:applicationpfe/constants/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:applicationpfe/app/routes/app_routes.dart';
 
 import 'package:get/get.dart';
 
@@ -9,6 +10,7 @@ import '../controllers/siginin_controller.dart';
 
 class SigininView extends GetView<SigininController> {
   const SigininView({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,21 +23,20 @@ class SigininView extends GetView<SigininController> {
               Assets.assetsImagesLogo,
               height: 200,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Welcome to Ennakl!",
-                textAlign: TextAlign.center,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium
-                    ?.copyWith(color: Colors.black),
-              ),
-            ),
+            const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  "Welcome to Ennakl!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
             Container(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Form(
-                key: controller.formKey,
+                key: controller.formKey, // Utiliser le GlobalKey unique
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,

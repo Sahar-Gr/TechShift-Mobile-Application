@@ -20,17 +20,16 @@ class RegisterView extends GetView<RegisterController> {
               Assets.assetsImagesLogo,
               height: 200,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Welcome to Ennakl!",
-                textAlign: TextAlign.center,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium
-                    ?.copyWith(color: Colors.black),
-              ),
-            ),
+            const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  "Welcome to Ennakl!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
             Container(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Form(
