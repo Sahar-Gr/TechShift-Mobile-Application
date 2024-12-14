@@ -1,16 +1,28 @@
-# applicationpfe
+# TechShift Mobile Application
 
-A new Flutter project.
+**TechShift Mobile Application** is a Flutter app designed to:  
+- Display real-time vehicle data (RPM, speed, temperature, fuel level, etc.).  
+- Simulate data in demo mode for training purposes.  
+- Provide an interactive 3D animation of a gearbox.  
 
-## Getting Started
+## Key Features
+- **Trainer Mode:** Real-time data retrieval via Firebase.  
+- **Demo Mode:** Data simulation for technician training.  
+- **3D Animation:** Interactive visualization of a gearbox in action.  
 
-This project is a starting point for a Flutter application.
+## App Interfaces
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Login Page
+![Login Page](assets/images/login.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. Engine Data Interface
+![Engine Data](assets/images/engine_data.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 3. Gearbox Animation
+![Gearbox Animation](assets/images/gearbox_animation.png)
+
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Sahar-Gr/TechShift-Mobile-Application.git
+
