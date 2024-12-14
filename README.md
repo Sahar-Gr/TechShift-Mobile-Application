@@ -16,10 +16,10 @@
 ![Login Page](assets/images/login.png)
 
 ### 2. Engine Data Interface
-![Engine Data](assets/images/engine_data.png)
+![Engine Data](assets/images/moteur.png)
 
 ### 3. Gearbox Animation
-![Gearbox Animation](assets/images/gearbox_animation.png)
+![Gearbox Animation](assets/images/animation.png)
 
 ## Installation
 1. Clone this repository:
